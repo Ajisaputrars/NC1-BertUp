@@ -32,8 +32,7 @@ class MainScreenController: UIViewController {
     
     private func setupNavigationBar(){
         let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
-        navigationController?.navigationBar.titleTextAttributes = textAttributes
-//        navigationController?.navigationBar.barStyle = .black
+        self.navigationController?.navigationBar.titleTextAttributes = textAttributes
         self.navigationController?.navigationBar.isTranslucent = false
         self.navigationController?.navigationBar.barTintColor = BTUColor.redColor
         self.navigationController?.navigationBar.tintColor = .white

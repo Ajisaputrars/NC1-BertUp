@@ -14,10 +14,12 @@ class MainScreenController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Lorem Ipsum"
         
         self.mainScreenView = MainScreenView(frame: self.view.frame)
         self.view = self.mainScreenView
         
+        self.setupNavigationBar()
         
         NotificationCenter.default.addObserver(forName: UIApplication.userDidTakeScreenshotNotification, object: nil, queue: OperationQueue.main) { notification in
             print("Screenshot taken!")
@@ -26,6 +28,16 @@ class MainScreenController: UIViewController {
     
     deinit {
         NotificationCenter.default.removeObserver(self)
+    }
+    
+    private func setupNavigationBar(){
+        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
+        navigationController?.navigationBar.titleTextAttributes = textAttributes
+//        navigationController?.navigationBar.barStyle = .black
+        self.navigationController?.navigationBar.isTranslucent = false
+        self.navigationController?.navigationBar.barTintColor = BTUColor.redColor
+        self.navigationController?.navigationBar.tintColor = .white
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "helpicon"), style: .plain, target: nil, action: nil)
     }
 }
 

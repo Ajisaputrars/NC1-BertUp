@@ -19,6 +19,7 @@
 		D7DB12992441A2580023BA23 /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DB12982441A2580023BA23 /* MainScreenView.swift */; };
 		D7DB129B2441A2800023BA23 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DB129A2441A2800023BA23 /* BaseView.swift */; };
 		D7DB129E2441AE9A0023BA23 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DB129D2441AE9A0023BA23 /* Utils.swift */; };
+		D7DB12A224420ADD0023BA23 /* BTUColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DB12A124420ADD0023BA23 /* BTUColor.swift */; };
 		EFE3A4804549F3A2CA6788E5 /* Pods_NanoChallenge1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC5D434996A2F22221A3F3A0 /* Pods_NanoChallenge1.framework */; };
 		FF9269215A38D461F0943322 /* Pods_NanoChallenge1Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88E3421FEBA76B1C3070504B /* Pods_NanoChallenge1Tests.framework */; };
 /* End PBXBuildFile section */
@@ -70,6 +71,7 @@
 		D7DB12982441A2580023BA23 /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
 		D7DB129A2441A2800023BA23 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		D7DB129D2441AE9A0023BA23 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		D7DB12A124420ADD0023BA23 /* BTUColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTUColor.swift; sourceTree = "<group>"; };
 		EE82372E05E4E2C3C01C2659 /* Pods_NanoChallenge1UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NanoChallenge1UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -212,6 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				D7DB129D2441AE9A0023BA23 /* Utils.swift */,
+				D7DB12A124420ADD0023BA23 /* BTUColor.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -456,6 +459,7 @@
 				D7DB126524418D240023BA23 /* MainScreenController.swift in Sources */,
 				D7DB126124418D240023BA23 /* AppDelegate.swift in Sources */,
 				D7DB129B2441A2800023BA23 /* BaseView.swift in Sources */,
+				D7DB12A224420ADD0023BA23 /* BTUColor.swift in Sources */,
 				D7DB129E2441AE9A0023BA23 /* Utils.swift in Sources */,
 				D7DB126324418D240023BA23 /* SceneDelegate.swift in Sources */,
 				D7DB12992441A2580023BA23 /* MainScreenView.swift in Sources */,

@@ -10,12 +10,14 @@
 		BF1EEE4DB65D4CDF24F6F779 /* Pods_NanoChallenge1UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE82372E05E4E2C3C01C2659 /* Pods_NanoChallenge1UITests.framework */; };
 		D7DB126124418D240023BA23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DB126024418D240023BA23 /* AppDelegate.swift */; };
 		D7DB126324418D240023BA23 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DB126224418D240023BA23 /* SceneDelegate.swift */; };
-		D7DB126524418D240023BA23 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DB126424418D240023BA23 /* ViewController.swift */; };
+		D7DB126524418D240023BA23 /* MainScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DB126424418D240023BA23 /* MainScreenController.swift */; };
 		D7DB126B24418D240023BA23 /* NanoChallenge1.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D7DB126924418D240023BA23 /* NanoChallenge1.xcdatamodeld */; };
 		D7DB126D24418D250023BA23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7DB126C24418D250023BA23 /* Assets.xcassets */; };
 		D7DB127024418D250023BA23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7DB126E24418D250023BA23 /* LaunchScreen.storyboard */; };
 		D7DB127B24418D250023BA23 /* NanoChallenge1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DB127A24418D250023BA23 /* NanoChallenge1Tests.swift */; };
 		D7DB128624418D250023BA23 /* NanoChallenge1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DB128524418D250023BA23 /* NanoChallenge1UITests.swift */; };
+		D7DB12992441A2580023BA23 /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DB12982441A2580023BA23 /* MainScreenView.swift */; };
+		D7DB129B2441A2800023BA23 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DB129A2441A2800023BA23 /* BaseView.swift */; };
 		EFE3A4804549F3A2CA6788E5 /* Pods_NanoChallenge1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC5D434996A2F22221A3F3A0 /* Pods_NanoChallenge1.framework */; };
 		FF9269215A38D461F0943322 /* Pods_NanoChallenge1Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88E3421FEBA76B1C3070504B /* Pods_NanoChallenge1Tests.framework */; };
 /* End PBXBuildFile section */
@@ -53,7 +55,7 @@
 		D7DB125D24418D240023BA23 /* NanoChallenge1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NanoChallenge1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7DB126024418D240023BA23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7DB126224418D240023BA23 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D7DB126424418D240023BA23 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D7DB126424418D240023BA23 /* MainScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenController.swift; sourceTree = "<group>"; };
 		D7DB126A24418D240023BA23 /* NanoChallenge1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NanoChallenge1.xcdatamodel; sourceTree = "<group>"; };
 		D7DB126C24418D250023BA23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D7DB126F24418D250023BA23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -64,6 +66,8 @@
 		D7DB128124418D250023BA23 /* NanoChallenge1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NanoChallenge1UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7DB128524418D250023BA23 /* NanoChallenge1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NanoChallenge1UITests.swift; sourceTree = "<group>"; };
 		D7DB128724418D250023BA23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7DB12982441A2580023BA23 /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
+		D7DB129A2441A2800023BA23 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		EE82372E05E4E2C3C01C2659 /* Pods_NanoChallenge1UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NanoChallenge1UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -132,7 +136,9 @@
 			children = (
 				D7DB126024418D240023BA23 /* AppDelegate.swift */,
 				D7DB126224418D240023BA23 /* SceneDelegate.swift */,
-				D7DB126424418D240023BA23 /* ViewController.swift */,
+				D7DB12952441A1EF0023BA23 /* Model */,
+				D7DB12942441A1E90023BA23 /* View */,
+				D7DB12932441A1DE0023BA23 /* Controller */,
 				D7DB126C24418D250023BA23 /* Assets.xcassets */,
 				D7DB126E24418D250023BA23 /* LaunchScreen.storyboard */,
 				D7DB127124418D250023BA23 /* Info.plist */,
@@ -157,6 +163,46 @@
 				D7DB128724418D250023BA23 /* Info.plist */,
 			);
 			path = NanoChallenge1UITests;
+			sourceTree = "<group>";
+		};
+		D7DB12932441A1DE0023BA23 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D7DB126424418D240023BA23 /* MainScreenController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D7DB12942441A1E90023BA23 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D7DB12962441A23A0023BA23 /* Screen */,
+				D7DB12972441A2420023BA23 /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D7DB12952441A1EF0023BA23 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D7DB12962441A23A0023BA23 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				D7DB129A2441A2800023BA23 /* BaseView.swift */,
+				D7DB12982441A2580023BA23 /* MainScreenView.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		D7DB12972441A2420023BA23 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		F421865578F3E8DE716D7FA2 /* Pods */ = {
@@ -396,9 +442,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7DB126524418D240023BA23 /* ViewController.swift in Sources */,
+				D7DB126524418D240023BA23 /* MainScreenController.swift in Sources */,
 				D7DB126124418D240023BA23 /* AppDelegate.swift in Sources */,
+				D7DB129B2441A2800023BA23 /* BaseView.swift in Sources */,
 				D7DB126324418D240023BA23 /* SceneDelegate.swift in Sources */,
+				D7DB12992441A2580023BA23 /* MainScreenView.swift in Sources */,
 				D7DB126B24418D240023BA23 /* NanoChallenge1.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,10 +8,16 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainScreenController: UIViewController {
+    
+    private var mainScreenView: MainScreenView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.mainScreenView = MainScreenView(frame: self.view.frame)
+        self.view = self.mainScreenView
+        
         
         NotificationCenter.default.addObserver(forName: UIApplication.userDidTakeScreenshotNotification, object: nil, queue: OperationQueue.main) { notification in
             print("Screenshot taken!")

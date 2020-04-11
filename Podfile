@@ -8,6 +8,7 @@ target 'NanoChallenge1' do
   # Pods for NanoChallenge1
   pod 'SnapKit'
   pod 'BEMCheckBox'
+  pod 'Kingfisher'
 
   target 'NanoChallenge1Tests' do
     inherit! :search_paths

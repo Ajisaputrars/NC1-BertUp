@@ -1,20 +1,26 @@
 PODS:
   - BEMCheckBox (1.4.1)
+  - Kingfisher (5.13.2):
+    - Kingfisher/Core (= 5.13.2)
+  - Kingfisher/Core (5.13.2)
   - SnapKit (5.0.1)
 
 DEPENDENCIES:
   - BEMCheckBox
+  - Kingfisher
   - SnapKit
 
 SPEC REPOS:
   trunk:
     - BEMCheckBox
+    - Kingfisher
     - SnapKit
 
 SPEC CHECKSUMS:
   BEMCheckBox: 5ba6e37ade3d3657b36caecc35c8b75c6c2b1a4e
+  Kingfisher: d342c8354c10c3d85a27d6d4c42c41285924b898
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
 
-PODFILE CHECKSUM: 9a38431deae1298098b8f88a1c70b02e070bcd45
+PODFILE CHECKSUM: 4e4081e82d5be57695676c39229f061d1e6b0656
 
 COCOAPODS: 1.9.0

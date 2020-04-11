@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,7 +11,6 @@
 		D7DB126124418D240023BA23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DB126024418D240023BA23 /* AppDelegate.swift */; };
 		D7DB126324418D240023BA23 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DB126224418D240023BA23 /* SceneDelegate.swift */; };
 		D7DB126524418D240023BA23 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DB126424418D240023BA23 /* ViewController.swift */; };
-		D7DB126824418D240023BA23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7DB126624418D240023BA23 /* Main.storyboard */; };
 		D7DB126B24418D240023BA23 /* NanoChallenge1.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D7DB126924418D240023BA23 /* NanoChallenge1.xcdatamodeld */; };
 		D7DB126D24418D250023BA23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7DB126C24418D250023BA23 /* Assets.xcassets */; };
 		D7DB127024418D250023BA23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7DB126E24418D250023BA23 /* LaunchScreen.storyboard */; };
@@ -55,7 +54,6 @@
 		D7DB126024418D240023BA23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7DB126224418D240023BA23 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D7DB126424418D240023BA23 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D7DB126724418D240023BA23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D7DB126A24418D240023BA23 /* NanoChallenge1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NanoChallenge1.xcdatamodel; sourceTree = "<group>"; };
 		D7DB126C24418D250023BA23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D7DB126F24418D250023BA23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -135,7 +133,6 @@
 				D7DB126024418D240023BA23 /* AppDelegate.swift */,
 				D7DB126224418D240023BA23 /* SceneDelegate.swift */,
 				D7DB126424418D240023BA23 /* ViewController.swift */,
-				D7DB126624418D240023BA23 /* Main.storyboard */,
 				D7DB126C24418D250023BA23 /* Assets.xcassets */,
 				D7DB126E24418D250023BA23 /* LaunchScreen.storyboard */,
 				D7DB127124418D250023BA23 /* Info.plist */,
@@ -176,7 +173,6 @@
 				1819CE154C010AD9D7F30208 /* Pods-NanoChallenge1UITests.debug.xcconfig */,
 				15C9E696D97C972486698F22 /* Pods-NanoChallenge1UITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -290,7 +286,6 @@
 			files = (
 				D7DB127024418D250023BA23 /* LaunchScreen.storyboard in Resources */,
 				D7DB126D24418D250023BA23 /* Assets.xcassets in Resources */,
-				D7DB126824418D240023BA23 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,14 +435,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		D7DB126624418D240023BA23 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D7DB126724418D240023BA23 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D7DB126E24418D250023BA23 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

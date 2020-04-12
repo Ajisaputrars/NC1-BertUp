@@ -11,8 +11,8 @@ import UIKit
 class RewardTableViewCell: BaseTableViewCell {
     
     let rewardImageView: UIImageView = {
-       let imageView = UIImageView()
-        imageView.backgroundColor = .blue
+        let imageView = UIImageView(image: UIImage(named: "lockedimageplaceholder"))
+        imageView.contentMode = .scaleToFill
         return imageView
     }()
     

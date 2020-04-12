@@ -12,4 +12,8 @@ class Utils {
     static func kelvinToCelcius(_ temp: Double) -> Int{
         return Int((round(temp)) - 273)
     }
+    
+    static func getDate() -> (hour: Int, minute: Int, second: Int){
+        return (Calendar.current.component(.hour, from: Date()), Calendar.current.component(.minute, from: Date()), Calendar.current.component(.second, from: Date()))
+    }
 }

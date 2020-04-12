@@ -10,9 +10,144 @@ import UIKit
 
 class MainScreenView: BaseView {
     
+    let cityAndDateLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Batam, 20 September 2020"
+        label.font = UIFont.systemFont(ofSize: 14, weight: .medium)
+        return label
+    }()
     
+    let weatherImageView: UIImageView = {
+        let imageView = UIImageView(image: UIImage(named: "sampleweatherimage"))
+        return imageView
+    }()
+    
+    let weatherDescriptionLabel: UILabel = {
+        let label = UILabel()
+        label.text = "25 °C"
+        label.font = UIFont.systemFont(ofSize: 14, weight: .medium)
+        return label
+    }()
+    
+    let illustrationImageView: UIImageView = {
+        let imageView = UIImageView(image: UIImage(named: "sampleillustration"))
+        imageView.contentMode = .scaleAspectFit
+        return imageView
+    }()
+    
+    let greetingLabel: UILabel = {
+       let label = UILabel()
+        label.text = "Selamat Pagi, Alberta"
+        label.font = UIFont.systemFont(ofSize: 17, weight: .semibold)
+        label.textAlignment = .center
+        return label
+    }()
+    
+    let motivationLabel: UILabel = {
+       let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 14, weight: .light)
+        label.text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        label.textAlignment = .center
+        label.numberOfLines = 0
+        label.minimumScaleFactor = 0.5
+        label.adjustsFontSizeToFitWidth = true
+        return label
+    }()
+    
+    let toDoButton: UIButton = {
+        let button = UIButton(type: UIButton.ButtonType.system)
+        button.setImage(UIImage(named: "todoicon"), for: .normal)
+        button.tintColor = BTUColor.red
+        return button
+    }()
+    
+    let rewardButton: UIButton = {
+        let button = UIButton(type: UIButton.ButtonType.system)
+        button.setImage(UIImage(named: "rewardicon"), for: .normal)
+        button.tintColor = BTUColor.red
+        return button
+    }()
+    
+    let shuffleButton: UIButton = {
+        let button = UIButton(type: UIButton.ButtonType.system)
+        button.setImage(UIImage(named: "shuffleicon"), for: .normal)
+        button.tintColor = BTUColor.red
+        return button
+    }()
     
     override func setupView() {
         self.backgroundColor = .white
+        
+        self.addSubview(cityAndDateLabel)
+        self.addSubview(weatherImageView)
+        self.addSubview(weatherDescriptionLabel)
+        self.addSubview(illustrationImageView)
+        self.addSubview(greetingLabel)
+        self.addSubview(motivationLabel)
+        self.addSubview(toDoButton)
+        self.addSubview(shuffleButton)
+        self.addSubview(rewardButton)
+        
+        self.cityAndDateLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(self.safeAreaLayoutGuide).offset(16)
+            make.left.equalTo(self).offset(16)
+            make.right.equalTo(self).offset(-16)
+            make.bottom.equalTo(weatherImageView.snp.top).offset(-8)
+            make.height.equalTo(15)
+        }
+        
+        self.weatherImageView.snp.makeConstraints { (make) in
+            make.top.equalTo(cityAndDateLabel.snp.bottom).offset(8)
+            make.left.equalTo(self).offset(16)
+            make.right.equalTo(weatherDescriptionLabel.snp.left).offset(-8)
+            make.bottom.equalTo(illustrationImageView.snp.top).offset(-16)
+            make.size.equalTo(CGSize(width: 25, height: 25))
+        }
+        
+        self.weatherDescriptionLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(cityAndDateLabel.snp.bottom).offset(10)
+            make.left.equalTo(weatherImageView.snp.right).offset(8)
+            make.height.equalTo(15)
+        }
+        
+        self.illustrationImageView.snp.makeConstraints { (make) in
+            make.top.equalTo(self.weatherImageView.snp.bottom).offset(16)
+            make.left.equalTo(self).offset(8)
+            make.right.equalTo(self).offset(-8)
+            make.bottom.equalTo(greetingLabel.snp.top).offset(-16)
+            make.height.equalTo(self.frame.size.height / 3.5)
+        }
+        
+        self.greetingLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(illustrationImageView.snp.bottom).offset(16)
+            make.left.equalTo(self).offset(16)
+            make.right.equalTo(self).offset(-16)
+            make.bottom.equalTo(motivationLabel.snp.top).offset(-8)
+        }
+        
+        self.motivationLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(greetingLabel.snp.bottom).offset(8)
+            make.left.equalTo(self).offset(16)
+            make.right.equalTo(self).offset(-16)
+            make.bottom.lessThanOrEqualTo(shuffleButton.snp.top).offset(-32)
+        }
+        
+        self.toDoButton.snp.makeConstraints { (make) in
+            make.left.equalTo(self).offset(16)
+            make.bottom.equalTo(self.safeAreaLayoutGuide).offset(-16)
+            make.size.equalTo(CGSize(width: self.frame.size.width / 4.5, height: self.frame.size.width / 4.5))
+        }
+        
+        self.rewardButton.snp.makeConstraints { (make) in
+            make.right.equalTo(self).offset(-16)
+            make.bottom.equalTo(self.safeAreaLayoutGuide).offset(-16)
+            make.size.equalTo(CGSize(width: self.frame.size.width / 4.5, height: self.frame.size.width / 4.5))
+        }
+        
+        self.shuffleButton.snp.makeConstraints { (make) in
+            make.bottom.equalTo(self.safeAreaLayoutGuide).offset(-24)
+            make.centerX.equalTo(self)
+            make.size.equalTo(CGSize(width: self.frame.size.width / 4, height: self.frame.size.width / 4))
+        }
     }
 }

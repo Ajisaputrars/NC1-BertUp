@@ -22,4 +22,8 @@ class NanoChallenge1Tests: XCTestCase {
     func testKelvinToCelcius() {
         XCTAssertEqual(Utils.kelvinToCelcius(303.15), 30)
     }
+    
+    func testGetDate(){
+        print(Utils.getDate())
+    }
 }

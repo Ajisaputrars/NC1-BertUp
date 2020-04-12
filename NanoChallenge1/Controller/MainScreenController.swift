@@ -14,12 +14,13 @@ class MainScreenController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Lorem Ipsum"
-        
         self.mainScreenView = MainScreenView(frame: self.view.frame)
         self.view = self.mainScreenView
         
+        self.title = "Lorem Ipsum"
+        
         self.setupNavigationBar()
+        self.setupButtonsTarget()
         
         NotificationCenter.default.addObserver(forName: UIApplication.userDidTakeScreenshotNotification, object: nil, queue: OperationQueue.main) { notification in
             print("Screenshot taken!")
@@ -37,6 +38,15 @@ class MainScreenController: UIViewController {
         self.navigationController?.navigationBar.barTintColor = BTUColor.red
         self.navigationController?.navigationBar.tintColor = .white
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "helpicon"), style: .plain, target: nil, action: nil)
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+    }
+    
+    private func setupButtonsTarget(){
+        self.mainScreenView.rewardButton.addTarget(self, action: #selector(goToRewardScreen), for: .touchUpInside)
+    }
+    
+    @objc private func goToRewardScreen(){
+        self.navigationController?.pushViewController(RewardScreenController(), animated: true)
     }
 }
 

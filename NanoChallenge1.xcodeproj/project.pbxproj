@@ -20,6 +20,10 @@
 		D7DB129B2441A2800023BA23 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DB129A2441A2800023BA23 /* BaseView.swift */; };
 		D7DB129E2441AE9A0023BA23 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DB129D2441AE9A0023BA23 /* Utils.swift */; };
 		D7DB12A224420ADD0023BA23 /* BTUColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DB12A124420ADD0023BA23 /* BTUColor.swift */; };
+		D7DB12A42442EF3F0023BA23 /* RewardScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DB12A32442EF3F0023BA23 /* RewardScreenController.swift */; };
+		D7DB12A62442EF520023BA23 /* RewardScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DB12A52442EF520023BA23 /* RewardScreenView.swift */; };
+		D7DB12A82442F4310023BA23 /* RewardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DB12A72442F4300023BA23 /* RewardTableViewCell.swift */; };
+		D7DB12AA2442F4450023BA23 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DB12A92442F4450023BA23 /* BaseTableViewCell.swift */; };
 		EFE3A4804549F3A2CA6788E5 /* Pods_NanoChallenge1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC5D434996A2F22221A3F3A0 /* Pods_NanoChallenge1.framework */; };
 		FF9269215A38D461F0943322 /* Pods_NanoChallenge1Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88E3421FEBA76B1C3070504B /* Pods_NanoChallenge1Tests.framework */; };
 /* End PBXBuildFile section */
@@ -72,6 +76,10 @@
 		D7DB129A2441A2800023BA23 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		D7DB129D2441AE9A0023BA23 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		D7DB12A124420ADD0023BA23 /* BTUColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTUColor.swift; sourceTree = "<group>"; };
+		D7DB12A32442EF3F0023BA23 /* RewardScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardScreenController.swift; sourceTree = "<group>"; };
+		D7DB12A52442EF520023BA23 /* RewardScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardScreenView.swift; sourceTree = "<group>"; };
+		D7DB12A72442F4300023BA23 /* RewardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardTableViewCell.swift; sourceTree = "<group>"; };
+		D7DB12A92442F4450023BA23 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		EE82372E05E4E2C3C01C2659 /* Pods_NanoChallenge1UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NanoChallenge1UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -174,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				D7DB126424418D240023BA23 /* MainScreenController.swift */,
+				D7DB12A32442EF3F0023BA23 /* RewardScreenController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -199,6 +208,7 @@
 			children = (
 				D7DB129A2441A2800023BA23 /* BaseView.swift */,
 				D7DB12982441A2580023BA23 /* MainScreenView.swift */,
+				D7DB12A52442EF520023BA23 /* RewardScreenView.swift */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -206,6 +216,8 @@
 		D7DB12972441A2420023BA23 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				D7DB12A92442F4450023BA23 /* BaseTableViewCell.swift */,
+				D7DB12A72442F4300023BA23 /* RewardTableViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -457,13 +469,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7DB126524418D240023BA23 /* MainScreenController.swift in Sources */,
+				D7DB12A82442F4310023BA23 /* RewardTableViewCell.swift in Sources */,
 				D7DB126124418D240023BA23 /* AppDelegate.swift in Sources */,
 				D7DB129B2441A2800023BA23 /* BaseView.swift in Sources */,
+				D7DB12AA2442F4450023BA23 /* BaseTableViewCell.swift in Sources */,
 				D7DB12A224420ADD0023BA23 /* BTUColor.swift in Sources */,
+				D7DB12A42442EF3F0023BA23 /* RewardScreenController.swift in Sources */,
 				D7DB129E2441AE9A0023BA23 /* Utils.swift in Sources */,
 				D7DB126324418D240023BA23 /* SceneDelegate.swift in Sources */,
 				D7DB12992441A2580023BA23 /* MainScreenView.swift in Sources */,
 				D7DB126B24418D240023BA23 /* NanoChallenge1.xcdatamodeld in Sources */,
+				D7DB12A62442EF520023BA23 /* RewardScreenView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -26,4 +26,8 @@ class NanoChallenge1Tests: XCTestCase {
     func testGetDate(){
         print(Utils.getDate())
     }
+    
+    func testTimeStatus(){
+        print(Utils.getTimeStatus())
+    }
 }

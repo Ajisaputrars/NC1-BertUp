@@ -1,5 +1,5 @@
 //
-//  ToDoList.swift
+//  BriefList.swift
 //  NanoChallenge1
 //
 //  Created by Aji Saputra Raka Siwi on 13/04/20.
@@ -8,8 +8,8 @@
 
 import Foundation
 
-class ToDoList {
-    static let morningToDoLists = ["Sample To Do List 1",
+class BriefList {
+    static let morningBriefList = ["Sample To Do List 1",
                                   "Sample To Do List 2",
                                   "Sample To Do List 3"]
 }

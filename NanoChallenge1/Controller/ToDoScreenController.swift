@@ -9,22 +9,26 @@
 import UIKit
 
 class ToDoScreenController: UIViewController {
+    
+    private var toDoScreenView: ToDoScreenView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.toDoScreenView = ToDoScreenView(frame: self.view.frame)
+        self.view = self.toDoScreenView
 
-        // Do any additional setup after loading the view.
+        self.title = "To Do Today"
+        
+        setupNavigationBar()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func setupNavigationBar(){
+        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
+        self.navigationController?.navigationBar.titleTextAttributes = textAttributes
+        self.navigationController?.navigationBar.isTranslucent = false
+        self.navigationController?.navigationBar.barTintColor = BTUColor.red
+        self.navigationController?.navigationBar.tintColor = .white
+//        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "helpicon"), style: .plain, target: nil, action: nil)
+//        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
-    */
-
 }

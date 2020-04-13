@@ -43,10 +43,17 @@ class MainScreenController: UIViewController {
     
     private func setupButtonsTarget(){
         self.mainScreenView.rewardButton.addTarget(self, action: #selector(goToRewardScreen), for: .touchUpInside)
+        self.mainScreenView.toDoButton.addTarget(self, action: #selector(goToToDoScreen), for: .touchUpInside)
     }
     
     @objc private func goToRewardScreen(){
         self.navigationController?.pushViewController(RewardScreenController(), animated: true)
+    }
+    
+    @objc private func goToToDoScreen(){
+        let controller = UINavigationController(rootViewController: ToDoScreenController())
+        controller.modalPresentationStyle = .fullScreen
+        self.present(controller, animated: true, completion: nil)
     }
 }
 

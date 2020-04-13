@@ -9,7 +9,7 @@
 import Foundation
 
 class BriefList {
-    static let morningBriefList = ["Sample To Do List 1",
+    static let sampleBriefList = ["Sample To Do List 1",
                                   "Sample To Do List 2",
                                   "Sample To Do List 3"]
 }

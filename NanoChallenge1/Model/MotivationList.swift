@@ -9,7 +9,7 @@
 import Foundation
 
 class MotivationList {
-    static let motivations = ["Sample To Do List 1",
+    static let sampleMotivations = ["Sample To Do List 1",
                                   "Sample To Do List 2",
                                   "Sample To Do List 3"]
 }

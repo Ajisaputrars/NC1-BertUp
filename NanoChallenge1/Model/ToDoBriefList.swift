@@ -9,7 +9,7 @@
 import Foundation
 
 class ToDoBriefList {
-    static let morningToDoBrief = ["Sample To Do List 1",
+    static let sampleToDoBrief = ["Sample To Do List 1",
                                   "Sample To Do List 2",
                                   "Sample To Do List 3"]
 }

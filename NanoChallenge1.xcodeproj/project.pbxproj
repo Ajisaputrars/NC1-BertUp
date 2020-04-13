@@ -32,6 +32,8 @@
 		D7EEFDAB24440F2900AB2E09 /* MotivationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7EEFDAA24440F2900AB2E09 /* MotivationList.swift */; };
 		D7EEFDAD24440F7200AB2E09 /* BriefList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7EEFDAC24440F7200AB2E09 /* BriefList.swift */; };
 		D7EEFDAF2444122600AB2E09 /* ToDoBriefList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7EEFDAE2444122600AB2E09 /* ToDoBriefList.swift */; };
+		D7EEFDB12444270E00AB2E09 /* ToDoListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7EEFDB02444270E00AB2E09 /* ToDoListTableViewCell.swift */; };
+		D7EEFDB324443F4800AB2E09 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7EEFDB224443F4800AB2E09 /* Settings.swift */; };
 		EFE3A4804549F3A2CA6788E5 /* Pods_NanoChallenge1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC5D434996A2F22221A3F3A0 /* Pods_NanoChallenge1.framework */; };
 		FF9269215A38D461F0943322 /* Pods_NanoChallenge1Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88E3421FEBA76B1C3070504B /* Pods_NanoChallenge1Tests.framework */; };
 /* End PBXBuildFile section */
@@ -96,6 +98,8 @@
 		D7EEFDAA24440F2900AB2E09 /* MotivationList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotivationList.swift; sourceTree = "<group>"; };
 		D7EEFDAC24440F7200AB2E09 /* BriefList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BriefList.swift; sourceTree = "<group>"; };
 		D7EEFDAE2444122600AB2E09 /* ToDoBriefList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoBriefList.swift; sourceTree = "<group>"; };
+		D7EEFDB02444270E00AB2E09 /* ToDoListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListTableViewCell.swift; sourceTree = "<group>"; };
+		D7EEFDB224443F4800AB2E09 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		EE82372E05E4E2C3C01C2659 /* Pods_NanoChallenge1UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NanoChallenge1UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -141,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				D75B0A70244365A200F5B730 /* TimeStatus.swift */,
+				D7EEFDB224443F4800AB2E09 /* Settings.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -250,6 +255,7 @@
 			children = (
 				D7DB12A92442F4450023BA23 /* BaseTableViewCell.swift */,
 				D7DB12A72442F4300023BA23 /* RewardTableViewCell.swift */,
+				D7EEFDB02444270E00AB2E09 /* ToDoListTableViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -507,6 +513,7 @@
 				D7EEFDA924440ED500AB2E09 /* TipsList.swift in Sources */,
 				D7EEFDA32443F9BA00AB2E09 /* ToDoScreenController.swift in Sources */,
 				D75B0A71244365A200F5B730 /* TimeStatus.swift in Sources */,
+				D7EEFDB12444270E00AB2E09 /* ToDoListTableViewCell.swift in Sources */,
 				D7DB129B2441A2800023BA23 /* BaseView.swift in Sources */,
 				D7EEFDA52443F9D100AB2E09 /* ToDoScreenView.swift in Sources */,
 				D7DB12AA2442F4450023BA23 /* BaseTableViewCell.swift in Sources */,
@@ -519,6 +526,7 @@
 				D7DB12992441A2580023BA23 /* MainScreenView.swift in Sources */,
 				D7DB126B24418D240023BA23 /* NanoChallenge1.xcdatamodeld in Sources */,
 				D7DB12A62442EF520023BA23 /* RewardScreenView.swift in Sources */,
+				D7EEFDB324443F4800AB2E09 /* Settings.swift in Sources */,
 				D7EEFDAD24440F7200AB2E09 /* BriefList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

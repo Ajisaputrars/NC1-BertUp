@@ -12,6 +12,7 @@ class ToDoScreenView: BaseView {
     
     let scrollView: UIScrollView = {
         let scrollView = UIScrollView()
+        scrollView.showsVerticalScrollIndicator = false
         return scrollView
     }()
     
@@ -92,11 +93,19 @@ class ToDoScreenView: BaseView {
     
     let toDoListTableView: UITableView = {
         let tableView = UITableView()
+        tableView.register(ToDoListTableViewCell.self, forCellReuseIdentifier: "ToDo")
+        tableView.isScrollEnabled = false
+        tableView.allowsSelection = false
         return tableView
     }()
     
     let doneButton: UIButton = {
         let button = UIButton(type: UIButton.ButtonType.system)
+        button.backgroundColor = .red
+        button.setTitle("Sudah kulakukan semua", for: .normal)
+        button.tintColor = .white
+        button.titleLabel?.font = UIFont(name: "AvenirNext-DemiBold", size: 16)
+        button.layer.cornerRadius = 10
         return button
     }()
     
@@ -173,7 +182,22 @@ class ToDoScreenView: BaseView {
             make.top.equalTo(toDoListTitleLabel.snp.bottom).offset(8)
             make.left.equalTo(scrollView).offset(16)
             make.right.equalTo(scrollView).offset(-16)
-            
+            make.bottom.equalTo(toDoListTableView.snp.top).offset(-8)
+        }
+        
+        self.toDoListTableView.snp.makeConstraints { (make) in
+            make.top.equalTo(toDoListDescriptionLabel.snp.bottom).offset(8)
+            make.left.right.equalTo(scrollView)
+            make.bottom.equalTo(doneButton.snp.top).offset(-32)
+            make.height.equalTo(100)
+        }
+        
+        self.doneButton.snp.makeConstraints { (make) in
+            make.top.equalTo(toDoListTableView.snp.bottom).offset(32)
+            make.left.equalTo(scrollView).offset(16)
+            make.right.equalTo(scrollView).offset(-16)
+            make.bottom.equalTo(scrollView).offset(-16)
+            make.height.equalTo(50)
         }
     }
 }

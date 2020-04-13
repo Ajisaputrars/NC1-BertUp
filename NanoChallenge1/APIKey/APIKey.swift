@@ -12,4 +12,3 @@ class APIKey {
     static let API_KEY = ""
     static let LOCATION = ""
 }
-

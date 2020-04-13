@@ -9,5 +9,6 @@
 import UIKit
 
 class BTUColor {
-    static let red = UIColor(red: 219/255, green: 36/255, blue: 36/255, alpha: 1)
+    static let purple = UIColor(red: 147/255, green: 16/255, blue: 216/255, alpha: 1)
+    static let red = UIColor(red: 219/255, green: 36/255, blue: 36/255, alpha: 1) //UIColor(red: 147/255, green: 16/255, blue: 216/255, alpha: 1)
 }

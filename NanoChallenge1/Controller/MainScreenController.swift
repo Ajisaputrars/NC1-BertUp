@@ -17,7 +17,7 @@ class MainScreenController: UIViewController {
         self.mainScreenView = MainScreenView(frame: self.view.frame)
         self.view = self.mainScreenView
         
-        self.title = "Lorem Ipsum"
+        self.title = "BertUp!"
         
         self.setupNavigationBar()
         self.setupButtonsTarget()
@@ -25,6 +25,10 @@ class MainScreenController: UIViewController {
         NotificationCenter.default.addObserver(forName: UIApplication.userDidTakeScreenshotNotification, object: nil, queue: OperationQueue.main) { notification in
             print("Screenshot taken!")
         }
+        
+        self.getDate()
+        
+        overrideUserInterfaceStyle = .light    
     }
     
     deinit {
@@ -35,9 +39,9 @@ class MainScreenController: UIViewController {
         let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
         self.navigationController?.navigationBar.titleTextAttributes = textAttributes
         self.navigationController?.navigationBar.isTranslucent = false
-        self.navigationController?.navigationBar.barTintColor = BTUColor.red
+        self.navigationController?.navigationBar.barTintColor = BTUColor.purple
         self.navigationController?.navigationBar.tintColor = .white
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "helpicon"), style: .plain, target: nil, action: nil)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "helpicon"), style: .plain, target: self, action: #selector(helpButtonPressed))
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
     
@@ -54,6 +58,14 @@ class MainScreenController: UIViewController {
         let controller = UINavigationController(rootViewController: ToDoScreenController())
         controller.modalPresentationStyle = .fullScreen
         self.present(controller, animated: true, completion: nil)
+    }
+    
+    @objc private func helpButtonPressed(){
+        self.navigationController?.pushViewController(HelpScreenController(), animated: true)
+    }
+    
+    private func getDate(){
+        self.mainScreenView.cityAndDateLabel.text = "\(Utils.getDay()), \(Utils.getCalendar().month) \(Utils.getMonth()) \(Utils.getCalendar().year)"
     }
 }
 

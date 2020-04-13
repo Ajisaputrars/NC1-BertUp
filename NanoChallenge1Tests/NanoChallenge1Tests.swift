@@ -24,10 +24,32 @@ class NanoChallenge1Tests: XCTestCase {
     }
     
     func testGetDate(){
-        print(Utils.getDate())
+        print(Utils.getCalendar())
+    }
+    
+    func testGetDay(){
+        print(Utils.getDay())
     }
     
     func testTimeStatus(){
         print(Utils.getTimeStatus())
+    }
+    
+    func testGetMonth(){
+        print(Utils.getMonth())
+    }
+    
+    func testWeatherResponseParser(){
+        if let path = Bundle.main.path(forResource: "WeatherDummy", ofType: "json") {
+            do {
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                let response = try Utils.getWeatherResponseParser(data: data)
+                print(response.weather[0].icon)
+                print(response.main.temp)
+            } catch let error {
+                // handle error
+                print(error.localizedDescription)
+            }
+        }
     }
 }

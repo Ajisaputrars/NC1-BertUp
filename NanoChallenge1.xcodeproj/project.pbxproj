@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BF1EEE4DB65D4CDF24F6F779 /* Pods_NanoChallenge1UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE82372E05E4E2C3C01C2659 /* Pods_NanoChallenge1UITests.framework */; };
+		D7037E802444A9D3000C92A5 /* WeatherDummy.json in Resources */ = {isa = PBXBuildFile; fileRef = D7037E7F2444A9D3000C92A5 /* WeatherDummy.json */; };
 		D75B0A71244365A200F5B730 /* TimeStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75B0A70244365A200F5B730 /* TimeStatus.swift */; };
 		D7DB126124418D240023BA23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DB126024418D240023BA23 /* AppDelegate.swift */; };
 		D7DB126324418D240023BA23 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DB126224418D240023BA23 /* SceneDelegate.swift */; };
@@ -34,6 +35,10 @@
 		D7EEFDAF2444122600AB2E09 /* ToDoBriefList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7EEFDAE2444122600AB2E09 /* ToDoBriefList.swift */; };
 		D7EEFDB12444270E00AB2E09 /* ToDoListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7EEFDB02444270E00AB2E09 /* ToDoListTableViewCell.swift */; };
 		D7EEFDB324443F4800AB2E09 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7EEFDB224443F4800AB2E09 /* Settings.swift */; };
+		D7EEFDB524444F5900AB2E09 /* HelpScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7EEFDB424444F5900AB2E09 /* HelpScreenController.swift */; };
+		D7EEFDB724444F6F00AB2E09 /* HelpScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7EEFDB624444F6F00AB2E09 /* HelpScreenView.swift */; };
+		D7EEFDB92444603C00AB2E09 /* BTUString.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7EEFDB82444603C00AB2E09 /* BTUString.swift */; };
+		D7EEFDBB2444A82700AB2E09 /* WeatherResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7EEFDBA2444A82700AB2E09 /* WeatherResponse.swift */; };
 		EFE3A4804549F3A2CA6788E5 /* Pods_NanoChallenge1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC5D434996A2F22221A3F3A0 /* Pods_NanoChallenge1.framework */; };
 		FF9269215A38D461F0943322 /* Pods_NanoChallenge1Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88E3421FEBA76B1C3070504B /* Pods_NanoChallenge1Tests.framework */; };
 /* End PBXBuildFile section */
@@ -68,6 +73,7 @@
 		BA78B401191840A86C9C347E /* Pods-NanoChallenge1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NanoChallenge1.release.xcconfig"; path = "Target Support Files/Pods-NanoChallenge1/Pods-NanoChallenge1.release.xcconfig"; sourceTree = "<group>"; };
 		BD61893C979D2F83858CFAB4 /* Pods-NanoChallenge1-NanoChallenge1Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NanoChallenge1-NanoChallenge1Tests.release.xcconfig"; path = "Target Support Files/Pods-NanoChallenge1-NanoChallenge1Tests/Pods-NanoChallenge1-NanoChallenge1Tests.release.xcconfig"; sourceTree = "<group>"; };
 		D476BC7EE28003C115D1D514 /* Pods-NanoChallenge1Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NanoChallenge1Tests.debug.xcconfig"; path = "Target Support Files/Pods-NanoChallenge1Tests/Pods-NanoChallenge1Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		D7037E7F2444A9D3000C92A5 /* WeatherDummy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = WeatherDummy.json; sourceTree = "<group>"; };
 		D75B0A70244365A200F5B730 /* TimeStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeStatus.swift; sourceTree = "<group>"; };
 		D7DB125D24418D240023BA23 /* NanoChallenge1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NanoChallenge1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7DB126024418D240023BA23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +106,10 @@
 		D7EEFDAE2444122600AB2E09 /* ToDoBriefList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoBriefList.swift; sourceTree = "<group>"; };
 		D7EEFDB02444270E00AB2E09 /* ToDoListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListTableViewCell.swift; sourceTree = "<group>"; };
 		D7EEFDB224443F4800AB2E09 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		D7EEFDB424444F5900AB2E09 /* HelpScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpScreenController.swift; sourceTree = "<group>"; };
+		D7EEFDB624444F6F00AB2E09 /* HelpScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpScreenView.swift; sourceTree = "<group>"; };
+		D7EEFDB82444603C00AB2E09 /* BTUString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTUString.swift; sourceTree = "<group>"; };
+		D7EEFDBA2444A82700AB2E09 /* WeatherResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherResponse.swift; sourceTree = "<group>"; };
 		EE82372E05E4E2C3C01C2659 /* Pods_NanoChallenge1UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NanoChallenge1UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -146,6 +156,8 @@
 			children = (
 				D75B0A70244365A200F5B730 /* TimeStatus.swift */,
 				D7EEFDB224443F4800AB2E09 /* Settings.swift */,
+				D7EEFDB82444603C00AB2E09 /* BTUString.swift */,
+				D7037E7F2444A9D3000C92A5 /* WeatherDummy.json */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -214,6 +226,7 @@
 				D7DB126424418D240023BA23 /* MainScreenController.swift */,
 				D7DB12A32442EF3F0023BA23 /* RewardScreenController.swift */,
 				D7EEFDA22443F9BA00AB2E09 /* ToDoScreenController.swift */,
+				D7EEFDB424444F5900AB2E09 /* HelpScreenController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -235,6 +248,7 @@
 				D7EEFDA824440ED500AB2E09 /* TipsList.swift */,
 				D7EEFDAE2444122600AB2E09 /* ToDoBriefList.swift */,
 				D7EEFDA624440B8300AB2E09 /* ToDoList.swift */,
+				D7EEFDBA2444A82700AB2E09 /* WeatherResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -246,6 +260,7 @@
 				D7DB12982441A2580023BA23 /* MainScreenView.swift */,
 				D7DB12A52442EF520023BA23 /* RewardScreenView.swift */,
 				D7EEFDA42443F9D100AB2E09 /* ToDoScreenView.swift */,
+				D7EEFDB624444F6F00AB2E09 /* HelpScreenView.swift */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -396,6 +411,7 @@
 			files = (
 				D7DB127024418D250023BA23 /* LaunchScreen.storyboard in Resources */,
 				D7DB126D24418D250023BA23 /* Assets.xcassets in Resources */,
+				D7037E802444A9D3000C92A5 /* WeatherDummy.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -517,10 +533,14 @@
 				D7DB129B2441A2800023BA23 /* BaseView.swift in Sources */,
 				D7EEFDA52443F9D100AB2E09 /* ToDoScreenView.swift in Sources */,
 				D7DB12AA2442F4450023BA23 /* BaseTableViewCell.swift in Sources */,
+				D7EEFDB724444F6F00AB2E09 /* HelpScreenView.swift in Sources */,
+				D7EEFDB92444603C00AB2E09 /* BTUString.swift in Sources */,
 				D7DB12A224420ADD0023BA23 /* BTUColor.swift in Sources */,
 				D7DB12A42442EF3F0023BA23 /* RewardScreenController.swift in Sources */,
 				D7EEFDAF2444122600AB2E09 /* ToDoBriefList.swift in Sources */,
+				D7EEFDB524444F5900AB2E09 /* HelpScreenController.swift in Sources */,
 				D7DB129E2441AE9A0023BA23 /* Utils.swift in Sources */,
+				D7EEFDBB2444A82700AB2E09 /* WeatherResponse.swift in Sources */,
 				D7EEFDA724440B8300AB2E09 /* ToDoList.swift in Sources */,
 				D7DB126324418D240023BA23 /* SceneDelegate.swift in Sources */,
 				D7DB12992441A2580023BA23 /* MainScreenView.swift in Sources */,

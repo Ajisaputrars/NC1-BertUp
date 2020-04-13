@@ -25,13 +25,15 @@ class ToDoScreenController: UIViewController {
         self.toDoScreenView.toDoListTableView.dataSource = self
         
         self.toDoScreenView.doneButton.addTarget(self, action: #selector(doneButtonPressed), for: .touchUpInside)
+        
+        overrideUserInterfaceStyle = .light
     }
     
     private func setupNavigationBar(){
         let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
         self.navigationController?.navigationBar.titleTextAttributes = textAttributes
         self.navigationController?.navigationBar.isTranslucent = false
-        self.navigationController?.navigationBar.barTintColor = BTUColor.red
+        self.navigationController?.navigationBar.barTintColor = BTUColor.purple
         self.navigationController?.navigationBar.tintColor = .white
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "closeicon"), style: UIBarButtonItem.Style.plain, target: self, action: #selector(dismissToDoController))

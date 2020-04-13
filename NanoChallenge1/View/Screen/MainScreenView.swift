@@ -12,7 +12,7 @@ class MainScreenView: BaseView {
     
     let cityAndDateLabel: UILabel = {
         let label = UILabel()
-        label.text = "Batam, 20 September 2020"
+        label.text = "Minggu, 20 September 2020"
         label.font = UIFont.systemFont(ofSize: 14, weight: .medium)
         return label
     }()
@@ -30,7 +30,7 @@ class MainScreenView: BaseView {
     }()
     
     let illustrationImageView: UIImageView = {
-        let imageView = UIImageView(image: UIImage(named: "sampleillustration"))
+        let imageView = UIImageView(image: UIImage(named: "sampleillustrationpurple"))
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()
@@ -57,21 +57,21 @@ class MainScreenView: BaseView {
     let toDoButton: UIButton = {
         let button = UIButton(type: UIButton.ButtonType.system)
         button.setImage(UIImage(named: "todoicon"), for: .normal)
-        button.tintColor = BTUColor.red
+        button.tintColor = BTUColor.purple
         return button
     }()
     
     let rewardButton: UIButton = {
         let button = UIButton(type: UIButton.ButtonType.system)
         button.setImage(UIImage(named: "rewardicon"), for: .normal)
-        button.tintColor = BTUColor.red
+        button.tintColor = BTUColor.purple
         return button
     }()
     
     let shuffleButton: UIButton = {
         let button = UIButton(type: UIButton.ButtonType.system)
         button.setImage(UIImage(named: "shuffleicon"), for: .normal)
-        button.tintColor = BTUColor.red
+        button.tintColor = BTUColor.purple
         return button
     }()
     

@@ -13,8 +13,10 @@ class ToDoListTableViewCell: BaseTableViewCell {
     
     let checkBox: BEMCheckBox = {
         let checkBox = BEMCheckBox()
-        checkBox.onTintColor = .red //Border color
-        checkBox.onCheckColor = .red //Checked color
+        checkBox.onTintColor = BTUColor.purple //Border color
+        checkBox.onCheckColor = BTUColor.purple //Checked color
+        checkBox.onAnimationType = .bounce
+        checkBox.offAnimationType = .bounce
         return checkBox
     }()
     

@@ -21,19 +21,15 @@ class RewardScreenController: UIViewController {
         
         self.rewardScreenView.rewardTableView.delegate = self
         self.rewardScreenView.rewardTableView.dataSource = self
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(true)
-//        let tableView = self.rewardScreenView.rewardTableView.cellForRow(at: IndexPath(row: 2, section: 0)) as! RewardTableViewCell
-//        print(tableView.rewardTitleLabel.text!)
+        
+        overrideUserInterfaceStyle = .light
     }
 }
 
 //MARK: Table View Delegate and Data Source
 extension RewardScreenController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return 5
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

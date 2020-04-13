@@ -17,8 +17,8 @@ class ToDoScreenView: BaseView {
     }()
     
     let photoImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.backgroundColor = .lightGray
+        let imageView = UIImageView(image: UIImage(named: "listillustration")?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate))
+        imageView.tintColor = BTUColor.purple
         return imageView
     }()
     
@@ -101,7 +101,7 @@ class ToDoScreenView: BaseView {
     
     let doneButton: UIButton = {
         let button = UIButton(type: UIButton.ButtonType.system)
-        button.backgroundColor = .red
+        button.backgroundColor = BTUColor.purple
         button.setTitle("Sudah kulakukan semua", for: .normal)
         button.tintColor = .white
         button.titleLabel?.font = UIFont(name: "AvenirNext-DemiBold", size: 16)

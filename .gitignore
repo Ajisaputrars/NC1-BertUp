@@ -90,4 +90,7 @@ fastlane/test_output
 iOSInjectionProject/
 /.DS_Store
 .DS_Store
+/APIKey
 APIKey/
+APIKey
+NanoChallenge1/APIKey/

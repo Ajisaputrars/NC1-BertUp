@@ -1,0 +1,43 @@
+{
+   "coord":{
+      "lon":104.05,
+      "lat":1.08
+   },
+   "weather":[
+      {
+         "id":801,
+         "main":"Clouds",
+         "description":"few clouds",
+         "icon":"02n"
+      }
+   ],
+   "base":"stations",
+   "main":{
+      "temp":301.82,
+      "feels_like":305.51,
+      "temp_min":300.93,
+      "temp_max":302.15,
+      "pressure":1012,
+      "humidity":79
+   },
+   "visibility":10000,
+   "wind":{
+      "speed":3.6,
+      "deg":60
+   },
+   "clouds":{
+      "all":20
+   },
+   "dt":1586786022,
+   "sys":{
+      "type":1,
+      "id":9382,
+      "country":"ID",
+      "sunrise":1586732402,
+      "sunset":1586776088
+   },
+   "timezone":25200,
+   "id":1641510,
+   "name":"Kangboi",
+   "cod":200
+}

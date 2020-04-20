@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import NanoChallenge1
+@testable import BertUp_
 
 class NanoChallenge1Tests: XCTestCase {
 
@@ -19,16 +19,62 @@ class NanoChallenge1Tests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testKelvinToCelcius() {
+        XCTAssertEqual(Utils.kelvinToCelcius(303.15), 30)
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    
+    func testGetDate(){
+        print(Utils.getCalendar())
+    }
+    
+    func testGetDay(){
+        print(Utils.getDay())
+    }
+    
+    func testTimeStatus(){
+        print(Utils.getTimeStatus())
+    }
+    
+    func testGetMonth(){
+        print(Utils.getMonth())
+    }
+    
+    func testWeatherResponseParser(){
+        if let path = Bundle.main.path(forResource: "WeatherDummy", ofType: "json") {
+            do {
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                let response = try Utils.getWeatherResponseParser(data: data)
+                print(response.weather[0].icon)
+                print(response.main.temp)
+            } catch let error {
+                print(error.localizedDescription)
+            }
         }
     }
-
+    
+    func testRewardResponseParser(){
+        if let path = Bundle.main.path(forResource: "Reward", ofType: "json") {
+            do {
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                let response = try Utils.getRewardResponseParser(data: data)
+                print(response)
+            } catch let error {
+                // handle error
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    func testMotivationResponseParser(){
+        if let path = Bundle.main.path(forResource: "Motivation", ofType: "json") {
+            do {
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                let response = try Utils.getMotivationResponseParser(data: data)
+                print(response)
+            } catch let error {
+                // handle error
+                print(error.localizedDescription)
+            }
+        }
+    }
 }

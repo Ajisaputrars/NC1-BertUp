@@ -10,6 +10,8 @@ xcuserdata/
 *.xccheckout
 
 ## compatibility with Xcode 3 and earlier (ignoring not required starting Xcode 4)
+NanoChallenge1/APIKey/APIKey.swift
+APIKey.swift
 build/
 DerivedData/
 *.moved-aside
@@ -90,3 +92,7 @@ fastlane/test_output
 iOSInjectionProject/
 /.DS_Store
 .DS_Store
+/APIKey
+APIKey/
+APIKey
+APIKey.swift

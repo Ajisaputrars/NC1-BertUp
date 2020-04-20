@@ -11,20 +11,22 @@ import UIKit
 class RewardTableViewCell: BaseTableViewCell {
     
     let rewardImageView: UIImageView = {
-        let imageView = UIImageView(image: UIImage(named: "lockedimageplaceholder"))
+        let imageView = UIImageView()
         imageView.contentMode = .scaleToFill
         return imageView
     }()
     
     let rewardTitleLabel: UILabel = {
         let label = UILabel()
-        label.text = "Sample Title"
+//        label.text = "Sample Title"
         return label
     }()
     
     let rewardDescriptionLabel: UILabel = {
         let label = UILabel()
-        label.text = "Sample Description"
+//        label.text = "Sample Description"
+        label.numberOfLines = 0
+        label.font = UIFont(name: "AvenirNext-Italic", size: 11)
         return label
     }()
     
@@ -47,12 +49,12 @@ class RewardTableViewCell: BaseTableViewCell {
             make.top.equalTo(self).offset(12)
             make.left.equalTo(rewardImageView.snp.right).offset(16)
             make.right.equalTo(self).offset(-8)
-            make.bottom.equalTo(rewardDescriptionLabel.snp.top).offset(-8)
+            make.bottom.equalTo(rewardDescriptionLabel.snp.top).offset(-5)
             make.height.equalTo(17)
         }
         
         rewardDescriptionLabel.snp.makeConstraints { (make) in
-            make.top.equalTo(rewardTitleLabel.snp.bottom).offset(8)
+            make.top.equalTo(rewardTitleLabel.snp.bottom).offset(5)
             make.left.equalTo(rewardImageView.snp.right).offset(16)
             make.right.equalTo(self).offset(-8)
             make.bottom.lessThanOrEqualTo(self).offset(-12)

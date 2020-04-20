@@ -9,7 +9,7 @@
 import Foundation
 
 class BTUUrl {
-    static let BASE_URL = "http://openweathermap.org"
+    static let BASE_URL = "http://api.openweathermap.org"
     static let WEATHER_URL = "/data/2.5/weather?q="
     static let WEATHER_APPID = "&appid="
     

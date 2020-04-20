@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import NanoChallenge1
+@testable import BertUp_
 
 class NanoChallenge1Tests: XCTestCase {
 
@@ -46,6 +46,31 @@ class NanoChallenge1Tests: XCTestCase {
                 let response = try Utils.getWeatherResponseParser(data: data)
                 print(response.weather[0].icon)
                 print(response.main.temp)
+            } catch let error {
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    func testRewardResponseParser(){
+        if let path = Bundle.main.path(forResource: "Reward", ofType: "json") {
+            do {
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                let response = try Utils.getRewardResponseParser(data: data)
+                print(response)
+            } catch let error {
+                // handle error
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    func testMotivationResponseParser(){
+        if let path = Bundle.main.path(forResource: "Motivation", ofType: "json") {
+            do {
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                let response = try Utils.getMotivationResponseParser(data: data)
+                print(response)
             } catch let error {
                 // handle error
                 print(error.localizedDescription)

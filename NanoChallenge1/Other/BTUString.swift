@@ -9,9 +9,9 @@
 import Foundation
 
 class BTUString {
-    let reward1 = "Reward1"
-    let reward2 = "Reward2"
-    let reward3 = "Reward3"
-    let reward4 = "Reward4"
-    let reward0 = "Reward0"
+    static let reward1 = "Reward1"
+    static let reward2 = "Reward2"
+    static let reward3 = "Reward3"
+    static let reward4 = "Reward4"
+    static let reward0 = "Reward0"
 }

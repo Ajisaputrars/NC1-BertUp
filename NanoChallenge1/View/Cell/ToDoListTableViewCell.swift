@@ -23,6 +23,7 @@ class ToDoListTableViewCell: BaseTableViewCell {
     let toDoListLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 14, weight: .regular)
+        label.numberOfLines = 0
         return label
     }()
     
@@ -41,10 +42,10 @@ class ToDoListTableViewCell: BaseTableViewCell {
         }
         
         self.toDoListLabel.snp.makeConstraints { (make) in
-            make.top.equalTo(self).offset(8)
+            make.top.equalTo(self)//.offset(8)
             make.left.equalTo(checkBox.snp.right).offset(8)
             make.right.equalTo(self).offset(-8)
-            make.bottom.equalTo(self).offset(-8)
+            make.bottom.equalTo(self)//.offset(-8)
         }
     }
 }

@@ -11,6 +11,10 @@ import UIKit
 class MainScreenController: UIViewController {
     
     private var mainScreenView: MainScreenView!
+    private var presenter: WeatherPresenter!
+    private var greetingWithTime: String!
+    private var weatherResponse: WeatherResponse!
+    private var motivationResponse: [MotivationResponse]!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,13 +26,31 @@ class MainScreenController: UIViewController {
         self.setupNavigationBar()
         self.setupButtonsTarget()
         
+        overrideUserInterfaceStyle = .light
+
         NotificationCenter.default.addObserver(forName: UIApplication.userDidTakeScreenshotNotification, object: nil, queue: OperationQueue.main) { notification in
             print("Screenshot taken!")
+            UserDefaults.standard.set("Hhh", forKey: BTUString.reward2)
         }
         
         self.getDate()
         
-        overrideUserInterfaceStyle = .light    
+        self.presenter = WeatherPresenter()
+        self.presenter.getWeatherResponse(controller: self, service: BTUService(), url: BTUUrl.BASE_URL + BTUUrl.WEATHER_URL + APIKey.LOCATION + BTUUrl.WEATHER_APPID + APIKey.API_KEY)
+        
+        self.greetingWithTime = Utils.getTimeString(Utils.getTimeStatus())
+        self.mainScreenView.greetingLabel.text = "Selamat \(self.greetingWithTime!), Alberta"
+        
+        self.setMotivationResponse()
+        self.shuffleButtonPressed()
+
+        Utils.lockOrientation(.portrait)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        Utils.lockOrientation(.portrait)
     }
     
     deinit {
@@ -48,6 +70,13 @@ class MainScreenController: UIViewController {
     private func setupButtonsTarget(){
         self.mainScreenView.rewardButton.addTarget(self, action: #selector(goToRewardScreen), for: .touchUpInside)
         self.mainScreenView.toDoButton.addTarget(self, action: #selector(goToToDoScreen), for: .touchUpInside)
+        self.mainScreenView.shuffleButton.addTarget(self, action: #selector(shuffleButtonPressed), for: .touchUpInside)
+    }
+    
+    @objc private func shuffleButtonPressed(){
+        let i = Int.random(in: 0..<self.motivationResponse.count)
+        self.mainScreenView.illustrationImageView.image = UIImage(named: self.motivationResponse[i].imageString)
+        self.mainScreenView.motivationLabel.text = self.motivationResponse[i].motivation
     }
     
     @objc private func goToRewardScreen(){
@@ -55,7 +84,11 @@ class MainScreenController: UIViewController {
     }
     
     @objc private func goToToDoScreen(){
-        let controller = UINavigationController(rootViewController: ToDoScreenController())
+        let toDoScreenController = ToDoScreenController()
+        toDoScreenController.weatherResponse = self.weatherResponse
+        toDoScreenController.delegate = self
+        
+        let controller = UINavigationController(rootViewController: toDoScreenController)
         controller.modalPresentationStyle = .fullScreen
         self.present(controller, animated: true, completion: nil)
     }
@@ -65,7 +98,50 @@ class MainScreenController: UIViewController {
     }
     
     private func getDate(){
-        self.mainScreenView.cityAndDateLabel.text = "\(Utils.getDay()), \(Utils.getCalendar().month) \(Utils.getMonth()) \(Utils.getCalendar().year)"
+        self.mainScreenView.cityAndDateLabel.text = "\(Utils.getDay()), \(Utils.getCalendar().date) \(Utils.getMonth()) \(Utils.getCalendar().year)"
+    }
+    
+    private func setMotivationResponse(){
+        if let path = Bundle.main.path(forResource: "Motivation", ofType: "json") {
+            do {
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                let response = try Utils.getMotivationResponseParser(data: data)
+                self.motivationResponse = response
+            } catch let error {
+                print(error.localizedDescription)
+            }
+        }
     }
 }
 
+extension MainScreenController: GetWeatherProtocol {    
+    func setWeather(weatherResponse: WeatherResponse) {
+        DispatchQueue.main.async {
+            self.weatherResponse = weatherResponse
+            self.mainScreenView.weatherImageView.kf.setImage(with: URL(string: "http://openweathermap.org/img/wn/\(weatherResponse.weather[0].icon)@2x.png"))
+            self.mainScreenView.weatherDescriptionLabel.text = "\(Utils.kelvinToCelcius(weatherResponse.main.temp))°C"
+        }
+    }
+    
+    func error(error: Error) {
+        DispatchQueue.main.async {
+            Utils.createAlert(controller: self, title: "Error", message: error.localizedDescription, style: .alert)
+        }
+    }
+}
+
+extension MainScreenController: ToDoDelegate {
+    func setToDoDone() {
+        UserDefaults.standard.set(Utils.getTimeString(Utils.getTimeStatus()), forKey: "todo")
+        UserDefaults.standard.set("Hhh", forKey: BTUString.reward0)
+        print(UserDefaults.standard.string(forKey: "todo")!)
+        
+        DispatchQueue.global().async {
+            Thread.sleep(forTimeInterval: 0.2)
+            
+            DispatchQueue.main.async {
+                Utils.createAlert(controller: self, title: "Reward Unlocked", message: "Selamat! Kamu sudah mengerjakan semua to-do list hari ini. Ada reward baru yang aktif. Cek di halaman reward.", style: .alert)
+            }
+        }
+    }
+}

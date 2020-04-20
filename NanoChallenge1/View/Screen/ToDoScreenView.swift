@@ -17,7 +17,7 @@ class ToDoScreenView: BaseView {
     }()
     
     let photoImageView: UIImageView = {
-        let imageView = UIImageView(image: UIImage(named: "listillustration")?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate))
+        let imageView = UIImageView(image: UIImage(named: "checklistillustration")?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate))
         imageView.tintColor = BTUColor.purple
         return imageView
     }()
@@ -55,7 +55,7 @@ class ToDoScreenView: BaseView {
         stackView.alignment = .center
         stackView.distribution = .fill
         stackView.axis = .horizontal
-        stackView.spacing = 5
+        stackView.spacing = 0
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
@@ -85,7 +85,7 @@ class ToDoScreenView: BaseView {
     
     let toDoListDescriptionLabel: UILabel = {
         let label = UILabel()
-        label.text = "Pastikan kamu sudah lakukan hal-hal ini di pagi ini biar lebih semangat : "
+        label.text = "Pastikan kamu sudah lakukan hal-hal ini biar lebih semangat : "
         label.numberOfLines = 0
         label.font = UIFont.systemFont(ofSize: 14, weight: .regular)
         return label
@@ -102,12 +102,17 @@ class ToDoScreenView: BaseView {
     let doneButton: UIButton = {
         let button = UIButton(type: UIButton.ButtonType.system)
         button.backgroundColor = BTUColor.purple
-        button.setTitle("Sudah kulakukan semua", for: .normal)
+        button.setTitle("Sudah kulakukan semua!", for: .normal)
         button.tintColor = .white
         button.titleLabel?.font = UIFont(name: "AvenirNext-DemiBold", size: 16)
         button.layer.cornerRadius = 10
         return button
     }()
+    
+    func disableDoneButton(){
+        self.doneButton.isEnabled = false
+        self.doneButton.backgroundColor = .lightGray //UIColor(red: 232/255, green: 225/255, blue: 225/255, alpha: 1)
+    }
     
     override func setupView() {
         self.backgroundColor = .white
@@ -145,41 +150,41 @@ class ToDoScreenView: BaseView {
             make.top.equalTo(greetingLabel.snp.bottom).offset(8)
             make.left.equalTo(scrollView).offset(32)
             make.right.equalTo(scrollView).offset(-32)
-            make.bottom.equalTo(weatherStackView.snp.top).offset(-16)
+            make.bottom.equalTo(weatherStackView.snp.top).offset(-8)
         }
         
         self.weatherStackView.snp.makeConstraints { (make) in
-            make.top.equalTo(briefLabel.snp.bottom).offset(16)
-            make.centerX.equalTo(scrollView)
+            make.top.equalTo(briefLabel.snp.bottom).offset(8)
+            make.centerX.equalTo(scrollView).offset(-8)
         }
         
         self.weatherImageView.snp.makeConstraints { (make) in
-            make.size.equalTo(CGSize(width: self.frame.size.width / 8, height: self.frame.size.width / 8))
+            make.size.equalTo(CGSize(width: self.frame.size.width / 7, height: self.frame.size.width / 7))
         }
         
         self.tipsTitleLabel.snp.makeConstraints { (make) in
             make.top.equalTo(weatherImageView.snp.bottom).offset(8)
             make.left.equalTo(scrollView).offset(16)
             make.right.equalTo(scrollView).offset(-16)
-            make.bottom.equalTo(tipsListsLabel.snp.top).offset(-8)
+            make.bottom.equalTo(tipsListsLabel.snp.top)//.offset(-0)
         }
         
         self.tipsListsLabel.snp.makeConstraints { (make) in
-            make.top.equalTo(tipsTitleLabel.snp.bottom).offset(8)
+            make.top.equalTo(tipsTitleLabel.snp.bottom)//.offset(0)
             make.left.equalTo(scrollView).offset(16)
             make.right.equalTo(scrollView).offset(-16)
-            make.bottom.equalTo(toDoListTitleLabel.snp.top).offset(-8)
+            make.bottom.equalTo(toDoListTitleLabel.snp.top).offset(-16)
         }
         
         self.toDoListTitleLabel.snp.makeConstraints { (make) in
-            make.top.equalTo(tipsListsLabel.snp.bottom).offset(8)
+            make.top.equalTo(tipsListsLabel.snp.bottom).offset(16)
             make.left.equalTo(scrollView).offset(16)
             make.right.equalTo(scrollView).offset(-16)
-            make.bottom.equalTo(toDoListDescriptionLabel.snp.top).offset(-8)
+            make.bottom.equalTo(toDoListDescriptionLabel.snp.top)
         }
         
         self.toDoListDescriptionLabel.snp.makeConstraints { (make) in
-            make.top.equalTo(toDoListTitleLabel.snp.bottom).offset(8)
+            make.top.equalTo(toDoListTitleLabel.snp.bottom)
             make.left.equalTo(scrollView).offset(16)
             make.right.equalTo(scrollView).offset(-16)
             make.bottom.equalTo(toDoListTableView.snp.top).offset(-8)

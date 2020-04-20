@@ -24,7 +24,7 @@ class MainScreenView: BaseView {
     
     let weatherDescriptionLabel: UILabel = {
         let label = UILabel()
-        label.text = "25 °C"
+        label.text = "25°C"
         label.font = UIFont.systemFont(ofSize: 14, weight: .medium)
         return label
     }()
@@ -45,8 +45,8 @@ class MainScreenView: BaseView {
     
     let motivationLabel: UILabel = {
        let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 14, weight: .light)
-        label.text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        label.font = UIFont(name: "AvenirNext-Italic", size: 13)
+        label.text = "Jarang orang mau mengakui, kesederhanaan adalah kekayaan yang terbesar di dunia ini: suatu karunia alam. Dan yang terpenting di atas segala-galanya ialah keberaniannya. Kesederhaan adalah kejujuran, dan keberanian adalah ketulusan."
         label.textAlignment = .center
         label.numberOfLines = 0
         label.minimumScaleFactor = 0.5

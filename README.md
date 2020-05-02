@@ -1,7 +1,6 @@
 # BertUp!
 
-
-
+![][image-1]
 ### **Project Overview**
 
 This app is about to improve my friend’s motivation and spirit to get through academy journey. In the main screen, there is three main buttons. Task button, refresh button and reward button.
@@ -26,4 +25,6 @@ This project is licensed under the MIT - see the [**LICENSE.md**][2] file for de
 Copyright © 2020 **Aji Saputra Raka Siwi**
 
 [1]:	https://github.com/Ajisaputrars
-[2]:	https://github.com/Ajisaputrars/Submission-4-Football-Match-Schedule-App-Swift-iOS/blob/master/LICENSE
+[2]:	https://github.com/Ajisaputrars/NC1-BertUp/blob/master/LICENSE
+
+[image-1]:	https://github.com/Ajisaputrars/NC1-BertUp/blob/master/screenshot.jpg
